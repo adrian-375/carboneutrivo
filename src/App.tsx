@@ -22,7 +22,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter basename="/carboneutrivo">
+      <BrowserRouter>  {/* Removed basename="/carboneutrivo" */}
         <Layout>
           <Routes>
             <Route path="/" element={<Index />} />
