@@ -30,9 +30,10 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [mobileExpertise, setMobileExpertise] = useState(false);
   const location = useLocation();
+  const isHome = location.pathname === "/";
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border/50">
+    <nav className={`fixed top-0 left-0 right-0 z-50 ${isHome ? "bg-gradient-to-b from-background/60 to-transparent" : "bg-background/95 backdrop-blur-md border-b border-border/50"}`}>
       <div className="container mx-auto flex flex-col items-center py-4 px-4">
         {/* Logo row */}
         <div className="w-full flex items-center justify-between xl:justify-center">
