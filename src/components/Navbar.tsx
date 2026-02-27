@@ -52,7 +52,7 @@ const Navbar = () => {
               <div key={item.label} className="relative group">
                 <Link
                   to={item.path}
-                  className={`text-[13px] uppercase tracking-[0.1em] font-body font-medium text-foreground/70 hover:text-primary transition-colors duration-300 whitespace-nowrap ${location.pathname.startsWith("/expertise") ? "text-primary" : ""}`}
+                  className={`text-[13px] uppercase tracking-[0.1em] font-body font-medium text-foreground hover:text-primary transition-colors duration-300 whitespace-nowrap ${location.pathname.startsWith("/expertise") ? "text-primary" : ""}`}
                 >
                   {item.label} ▾
                 </Link>
