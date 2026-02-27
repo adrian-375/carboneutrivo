@@ -47,7 +47,10 @@ const TeamPage = () => (
       <div className="mb-12">
         <h2 className="text-2xl md:text-3xl font-display text-foreground mb-4">Our Leadership Team</h2>
         <p className="text-muted-foreground text-base font-body leading-relaxed">
-          At Pavsho Enviro Services, our leadership team brings together vision, scientific expertise, and operational excellence. The team combines strengths across environmental science, forestry, carbon project development, geospatial intelligence, governance, finance, and organizational leadership to deliver high integrity, standards aligned carbon solutions.
+          At CarboNeutrivo , our leadership team brings together vision, scientific expertise, and operational
+          excellence. The team combines strengths across environmental science, forestry, carbon project development,
+          geospatial intelligence, governance, finance, and organizational leadership to deliver high integrity,
+          standards aligned carbon solutions.
         </p>
       </div>
 
@@ -62,7 +65,12 @@ const TeamPage = () => (
           >
             <div className="flex-shrink-0 w-14 h-14 rounded-full bg-secondary flex items-center justify-center">
               <span className="text-primary font-display text-lg">
-                {m.name.replace(/^(Mr\.|Ms\.|Dr\.)\s*/, "").split(" ").map((n) => n[0]).slice(0, 2).join("")}
+                {m.name
+                  .replace(/^(Mr\.|Ms\.|Dr\.)\s*/, "")
+                  .split(" ")
+                  .map((n) => n[0])
+                  .slice(0, 2)
+                  .join("")}
               </span>
             </div>
             <div className="flex-1 min-w-0">
