@@ -32,7 +32,7 @@ const Navbar = () => {
   const location = useLocation();
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-b from-background/60 to-transparent">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border/50">
       <div className="container mx-auto flex flex-col items-center py-4 px-4">
         {/* Logo row */}
         <div className="w-full flex items-center justify-between xl:justify-center">
@@ -52,7 +52,7 @@ const Navbar = () => {
               <div key={item.label} className="relative group">
                 <Link
                   to={item.path}
-                  className={`text-[13px] uppercase tracking-[0.1em] font-body font-medium text-foreground/70 hover:text-primary transition-colors duration-300 whitespace-nowrap ${location.pathname.startsWith("/expertise") ? "text-primary" : ""}`}
+                  className={`text-[13px] uppercase tracking-[0.1em] font-body font-medium text-foreground hover:text-primary transition-colors duration-300 whitespace-nowrap ${location.pathname.startsWith("/expertise") ? "text-primary" : ""}`}
                 >
                   {item.label} ▾
                 </Link>
@@ -61,7 +61,7 @@ const Navbar = () => {
                     <Link
                       key={child.path}
                       to={child.path}
-                      className="block px-4 py-2.5 text-[11px] uppercase tracking-[0.1em] text-foreground/60 hover:text-primary hover:bg-primary/5 transition-colors duration-200"
+                      className="block px-4 py-2.5 text-[11px] uppercase tracking-[0.1em] text-foreground/80 hover:text-primary hover:bg-primary/5 transition-colors duration-200"
                     >
                       {child.label}
                     </Link>
@@ -72,7 +72,7 @@ const Navbar = () => {
               <Link
                 key={item.label}
                 to={item.path}
-                className={`text-[13px] uppercase tracking-[0.1em] font-body font-medium text-foreground/70 hover:text-primary transition-colors duration-300 whitespace-nowrap ${location.pathname === item.path ? "text-primary" : ""}`}
+                className={`text-[13px] uppercase tracking-[0.1em] font-body font-medium text-foreground hover:text-primary transition-colors duration-300 whitespace-nowrap ${location.pathname === item.path ? "text-primary" : ""}`}
               >
                 {item.label}
               </Link>
