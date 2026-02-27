@@ -61,7 +61,7 @@ const Navbar = () => {
                     <Link
                       key={child.path}
                       to={child.path}
-                      className="block px-4 py-2.5 text-[11px] uppercase tracking-[0.1em] text-foreground/60 hover:text-primary hover:bg-primary/5 transition-colors duration-200"
+                      className="block px-4 py-2.5 text-[11px] uppercase tracking-[0.1em] text-foreground/80 hover:text-primary hover:bg-primary/5 transition-colors duration-200"
                     >
                       {child.label}
                     </Link>
