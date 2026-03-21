@@ -194,9 +194,7 @@ const ProjectsPage = () => (
             {/* Meta badges */}
             <div className="flex flex-wrap gap-2 mb-8">
               <span className="text-xs px-3 py-1 rounded-full bg-primary/15 text-primary font-body">{p.type}</span>
-              <span className="text-xs px-3 py-1 rounded-full bg-foreground/10 text-foreground font-body">
-                {p.standard}
-              </span>
+              <span className="text-xs px-3 py-1 rounded-full bg-foreground/10 text-black font-body">{p.standard}</span>
               <span className="text-xs px-3 py-1 rounded-full bg-foreground/10 text-muted-foreground font-body">
                 {p.area}
               </span>
