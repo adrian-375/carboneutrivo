@@ -11,7 +11,7 @@ const ContactPage = () => {
         <div className="space-y-5">
           {[
             { icon: Phone, text: "+91 8310624214" },
-            { icon: MapPin, text: "India" },
+            { icon: MapPin, text: "WeWork Embassy One, Hebbal, Bangalore" },
           ].map((c) => (
             <div key={c.text} className="flex items-center gap-3 text-muted-foreground font-body text-sm">
               <c.icon className="text-primary" size={18} />
