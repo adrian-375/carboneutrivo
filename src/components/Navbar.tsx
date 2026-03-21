@@ -33,15 +33,14 @@ const Navbar = () => {
   const isHome = location.pathname === "/";
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 ${isHome ? "bg-gradient-to-b from-background/60 to-transparent" : "bg-background/95 backdrop-blur-md border-b border-border/50"}`}>
+    <nav className={`fixed top-0 left-0 right-0 z-50 ${isHome ? "bg-gradient-to-b from-background/60 to-transparent" : "bg-white/95 backdrop-blur-md border-b border-gray-200"}`}>
       <div className="container mx-auto flex flex-col items-center py-4 px-4">
         {/* Logo row */}
         <div className="w-full flex items-center justify-between xl:justify-center">
-          <Link to="/" className="font-display text-2xl tracking-wide text-foreground/90">
+          <Link to="/" className={`font-display text-2xl tracking-wide ${isHome ? "text-foreground/90" : "text-[#1a1a1a]"}`}>
             Carbo<span className="text-primary">Neutrivo</span>
           </Link>
-          {/* Mobile toggle */}
-          <button className="xl:hidden text-foreground/70" onClick={() => setOpen(!open)}>
+          <button className={`xl:hidden ${isHome ? "text-foreground/70" : "text-[#1a1a1a]"}`} onClick={() => setOpen(!open)}>
             {open ? <X size={22} /> : <Menu size={22} />}
           </button>
         </div>
@@ -53,16 +52,22 @@ const Navbar = () => {
               <div key={item.label} className="relative group">
                 <Link
                   to={item.path}
-                  className={`text-[13px] uppercase tracking-[0.1em] font-body font-medium text-foreground hover:text-primary transition-colors duration-300 whitespace-nowrap ${location.pathname.startsWith("/expertise") ? "text-primary" : ""}`}
+                  className={`text-[13px] uppercase tracking-[0.1em] font-body font-medium hover:text-primary transition-colors duration-300 whitespace-nowrap ${
+                    location.pathname.startsWith("/expertise") ? "text-primary" : isHome ? "text-foreground" : "text-[#1a1a1a]"
+                  }`}
                 >
                   {item.label} ▾
                 </Link>
-                <div className="absolute top-full left-0 mt-3 py-2 bg-background/90 backdrop-blur-xl border border-primary/10 rounded-lg shadow-2xl shadow-primary/5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 min-w-[280px] z-50">
+                <div className={`absolute top-full left-0 mt-3 py-2 backdrop-blur-xl border rounded-lg shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 min-w-[280px] z-50 ${
+                  isHome ? "bg-background/90 border-primary/10 shadow-primary/5" : "bg-white border-gray-200"
+                }`}>
                   {item.children.map((child) => (
                     <Link
                       key={child.path}
                       to={child.path}
-                      className="block px-4 py-2.5 text-[11px] uppercase tracking-[0.1em] text-foreground/80 hover:text-primary hover:bg-primary/5 transition-colors duration-200"
+                      className={`block px-4 py-2.5 text-[11px] uppercase tracking-[0.1em] hover:text-primary hover:bg-primary/5 transition-colors duration-200 ${
+                        isHome ? "text-foreground/80" : "text-[#1a1a1a]/80"
+                      }`}
                     >
                       {child.label}
                     </Link>
@@ -73,7 +78,9 @@ const Navbar = () => {
               <Link
                 key={item.label}
                 to={item.path}
-                className={`text-[13px] uppercase tracking-[0.1em] font-body font-medium text-foreground hover:text-primary transition-colors duration-300 whitespace-nowrap ${location.pathname === item.path ? "text-primary" : ""}`}
+                className={`text-[13px] uppercase tracking-[0.1em] font-body font-medium hover:text-primary transition-colors duration-300 whitespace-nowrap ${
+                  location.pathname === item.path ? "text-primary" : isHome ? "text-foreground" : "text-[#1a1a1a]"
+                }`}
               >
                 {item.label}
               </Link>
@@ -89,7 +96,9 @@ const Navbar = () => {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            className="xl:hidden bg-background/90 backdrop-blur-xl border-b border-primary/10 overflow-hidden"
+            className={`xl:hidden backdrop-blur-xl overflow-hidden ${
+              isHome ? "bg-background/90 border-b border-primary/10" : "bg-white border-b border-gray-200"
+            }`}
           >
             <div className="container mx-auto py-4 px-4 flex flex-col gap-2">
               {navItems.map((item) =>
@@ -97,13 +106,15 @@ const Navbar = () => {
                   <div key={item.label}>
                     <button
                       onClick={() => setMobileExpertise(!mobileExpertise)}
-                      className="text-sm text-muted-foreground hover:text-primary transition-colors py-1 w-full text-left"
+                      className={`text-sm hover:text-primary transition-colors py-1 w-full text-left ${
+                        isHome ? "text-muted-foreground" : "text-gray-600"
+                      }`}
                     >
                       {item.label} {mobileExpertise ? "▴" : "▾"}
                     </button>
                     {mobileExpertise && (
                       <div className="pl-4 flex flex-col gap-1 mt-1">
-                        <Link to={item.path} onClick={() => setOpen(false)} className="text-xs text-muted-foreground hover:text-primary py-1">
+                        <Link to={item.path} onClick={() => setOpen(false)} className={`text-xs hover:text-primary py-1 ${isHome ? "text-muted-foreground" : "text-gray-600"}`}>
                           Overview
                         </Link>
                         {item.children.map((child) => (
@@ -111,7 +122,7 @@ const Navbar = () => {
                             key={child.path}
                             to={child.path}
                             onClick={() => setOpen(false)}
-                            className="text-xs text-muted-foreground hover:text-primary py-1"
+                            className={`text-xs hover:text-primary py-1 ${isHome ? "text-muted-foreground" : "text-gray-600"}`}
                           >
                             {child.label}
                           </Link>
@@ -124,7 +135,9 @@ const Navbar = () => {
                     key={item.label}
                     to={item.path}
                     onClick={() => setOpen(false)}
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors py-1"
+                    className={`text-sm hover:text-primary transition-colors py-1 ${
+                      isHome ? "text-muted-foreground" : "text-gray-600"
+                    }`}
                   >
                     {item.label}
                   </Link>

@@ -108,7 +108,7 @@ const projects: Project[] = [
 ];
 
 const ProjectsPage = () => (
-  <div className="pt-32 pb-20 overflow-x-hidden">
+  <div className="pt-32 pb-20 bg-white overflow-x-hidden">
     {/* Hero */}
     <section className="container mx-auto px-4 mb-16">
       <motion.div
@@ -118,10 +118,10 @@ const ProjectsPage = () => (
         className="max-w-4xl mx-auto text-center"
       >
         <span className="text-primary text-sm tracking-widest uppercase font-body">Ongoing Projects</span>
-        <h1 className="text-4xl md:text-6xl font-display mt-4 mb-6 text-foreground">
+        <h1 className="text-4xl md:text-6xl font-display mt-4 mb-6 text-primary">
           Climate & Sustainability Initiatives
         </h1>
-        <p className="text-base md:text-lg text-muted-foreground font-body max-w-3xl mx-auto leading-relaxed">
+        <p className="text-base md:text-lg text-[#1a1a1a] font-body max-w-3xl mx-auto leading-relaxed">
           Our ongoing projects integrate science, community participation, and internationally recognized
           methodologies to deliver measurable climate, biodiversity, and socio-economic impact.
         </p>
@@ -138,7 +138,7 @@ const ProjectsPage = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: i * 0.05 }}
-            className="rounded-2xl border border-foreground/10 bg-foreground/[0.04] backdrop-blur-sm p-8 md:p-12"
+            className="rounded-2xl border border-gray-200 bg-white p-8 md:p-12 shadow-sm"
           >
             {/* Header */}
             <div className="flex items-start gap-5 mb-6">
@@ -147,7 +147,7 @@ const ProjectsPage = () => (
               </div>
               <div>
                 <h2 className="text-xl md:text-3xl font-display text-primary leading-snug">{p.title}</h2>
-                <span className="text-sm text-muted-foreground font-body flex items-center gap-1 mt-1">
+                <span className="text-sm text-gray-500 font-body flex items-center gap-1 mt-1">
                   <MapPin size={14} /> {p.subtitle}
                 </span>
               </div>
@@ -156,10 +156,10 @@ const ProjectsPage = () => (
             {/* Meta badges */}
             <div className="flex flex-wrap gap-2 mb-8">
               <span className="text-xs px-3 py-1 rounded-full bg-primary/15 text-primary font-body">{p.type}</span>
-              <span className="text-xs px-3 py-1 rounded-full bg-foreground/10 text-foreground font-body">{p.standard}</span>
-              <span className="text-xs px-3 py-1 rounded-full bg-foreground/10 text-muted-foreground font-body">{p.area}</span>
+              <span className="text-xs px-3 py-1 rounded-full bg-gray-100 text-[#1a1a1a] font-body">{p.standard}</span>
+              <span className="text-xs px-3 py-1 rounded-full bg-gray-100 text-gray-500 font-body">{p.area}</span>
               {p.partner && (
-                <span className="text-xs px-3 py-1 rounded-full bg-foreground/10 text-muted-foreground font-body flex items-center gap-1">
+                <span className="text-xs px-3 py-1 rounded-full bg-gray-100 text-gray-500 font-body flex items-center gap-1">
                   <Users size={12} /> {p.partner}
                 </span>
               )}
@@ -169,7 +169,7 @@ const ProjectsPage = () => (
             <h3 className="text-sm uppercase tracking-widest text-primary font-body mb-4">Key Objectives</h3>
             <ul className="space-y-3">
               {p.objectives.map((obj) => (
-                <li key={obj} className="text-base md:text-lg text-muted-foreground font-body flex items-start gap-3">
+                <li key={obj} className="text-base md:text-lg text-[#1a1a1a] font-body flex items-start gap-3">
                   <span className="w-2 h-2 rounded-full bg-primary mt-2.5 flex-shrink-0" />
                   {obj}
                 </li>

@@ -33,15 +33,15 @@ const services = [
 ];
 
 const AboutPage = () => (
-  <div className="pt-32 pb-20">
+  <div className="pt-32 pb-20 bg-white">
     {/* Hero */}
     <section className="container mx-auto px-4 mb-20">
       <motion.div {...fadeUp} className="max-w-4xl mx-auto text-center">
         <span className="text-primary text-sm font-body tracking-widest uppercase">About Us</span>
-        <h1 className="text-4xl md:text-6xl font-display mt-4 mb-8 text-foreground">
+        <h1 className="text-4xl md:text-6xl font-display mt-4 mb-8 text-primary">
           Building a Sustainable Future
         </h1>
-        <p className="text-lg md:text-xl text-muted-foreground font-body leading-relaxed max-w-3xl mx-auto">
+        <p className="text-lg md:text-xl text-[#1a1a1a] font-body leading-relaxed max-w-3xl mx-auto">
           We are committed to blending technology with environmental expertise, offering end to end solutions
           that drive both business success and global climate action.
         </p>
@@ -52,9 +52,9 @@ const AboutPage = () => (
     <section className="container mx-auto px-4 mb-20">
       <div className="section-divider mb-16" />
       <motion.div {...fadeUp} className="max-w-4xl mx-auto">
-        <div className="rounded-2xl border border-foreground/10 bg-foreground/[0.04] backdrop-blur-sm p-8 md:p-10">
+        <div className="rounded-2xl border border-gray-200 bg-white p-8 md:p-10 shadow-sm">
           <h2 className="text-3xl md:text-4xl font-display text-primary mb-6">Why Carboneutrivo?</h2>
-          <div className="space-y-4 text-muted-foreground font-body leading-relaxed">
+          <div className="space-y-4 text-[#1a1a1a] font-body leading-relaxed">
             <p>
               Carboneutrivo offers comprehensive consultancy and project development services focused on advancing
               sustainability and climate action across AFOLU (Agriculture, Forestry, and Other Land Use), nature based
@@ -76,13 +76,13 @@ const AboutPage = () => (
     {/* Core Expertise */}
     <section className="container mx-auto px-4 mb-20">
       <motion.div {...fadeUp} className="max-w-4xl mx-auto">
-        <div className="rounded-2xl border border-foreground/10 bg-foreground/[0.04] backdrop-blur-sm p-8 md:p-10">
+        <div className="rounded-2xl border border-gray-200 bg-white p-8 md:p-10 shadow-sm">
           <h2 className="text-3xl md:text-4xl font-display text-primary mb-8">Our Core Expertise</h2>
           <div className="space-y-3">
             {expertiseItems.map((item) => (
               <div key={item} className="flex items-start gap-3">
                 <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                <span className="text-muted-foreground text-sm font-body">{item}</span>
+                <span className="text-[#1a1a1a] text-sm font-body">{item}</span>
               </div>
             ))}
           </div>
@@ -94,13 +94,13 @@ const AboutPage = () => (
     <section className="container mx-auto px-4 mb-20">
       <div className="section-divider mb-16" />
       <motion.div {...fadeUp} className="max-w-4xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-display text-foreground mb-10">Our Guiding Principles</h2>
+        <h2 className="text-3xl md:text-4xl font-display text-primary mb-10">Our Guiding Principles</h2>
         <div className="grid sm:grid-cols-2 gap-5">
           {principles.map((p) => (
-            <div key={p.title} className="rounded-2xl border border-foreground/10 bg-foreground/[0.04] backdrop-blur-sm p-6 hover:border-primary/30 transition-colors group">
+            <div key={p.title} className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm hover:border-primary/30 transition-colors group">
               <p.icon className="text-primary mb-3 group-hover:scale-110 transition-transform" size={24} />
-              <h3 className="font-display text-lg text-foreground mb-2">{p.title}</h3>
-              <p className="text-muted-foreground text-sm font-body leading-relaxed">{p.desc}</p>
+              <h3 className="font-display text-lg text-primary mb-2">{p.title}</h3>
+              <p className="text-[#1a1a1a] text-sm font-body leading-relaxed">{p.desc}</p>
             </div>
           ))}
         </div>
@@ -110,11 +110,11 @@ const AboutPage = () => (
     {/* Delivery Framework */}
     <section className="container mx-auto px-4 mb-20">
       <motion.div {...fadeUp} className="max-w-4xl mx-auto">
-        <div className="rounded-2xl border border-foreground/10 bg-foreground/[0.04] backdrop-blur-sm p-8 md:p-10">
+        <div className="rounded-2xl border border-gray-200 bg-white p-8 md:p-10 shadow-sm">
           <h2 className="text-2xl md:text-3xl font-display text-primary mb-4">
             Integrated Carbon Project Delivery Framework
           </h2>
-          <p className="text-muted-foreground font-body leading-relaxed">
+          <p className="text-[#1a1a1a] font-body leading-relaxed">
             Carboneutrivo applies a PMBOK® aligned project management framework integrated with Verra VCS, CCB Gold,
             and SD VISta requirements. This structured approach ensures disciplined planning, risk management, delivery
             assurance, and transparent monitoring across the full project lifecycle — from feasibility and design to
@@ -127,11 +127,11 @@ const AboutPage = () => (
     {/* Governance Snapshot */}
     <section className="container mx-auto px-4 mb-20">
       <motion.div {...fadeUp} className="max-w-4xl mx-auto">
-        <div className="rounded-2xl border border-foreground/10 bg-foreground/[0.04] backdrop-blur-sm p-8 md:p-10">
+        <div className="rounded-2xl border border-gray-200 bg-white p-8 md:p-10 shadow-sm">
           <h2 className="text-2xl md:text-3xl font-display text-primary mb-4">
             Governance & Integrity Snapshot
           </h2>
-          <p className="text-muted-foreground font-body leading-relaxed">
+          <p className="text-[#1a1a1a] font-body leading-relaxed">
             Carboneutrivo operates under a comprehensive Governance & Integrity Framework aligned with voluntary carbon
             market best practices. This includes clear policies on ethics, anti corruption, FPIC, safeguards, grievance
             redressal, whistleblowing, and strict prevention of double counting. Strong leadership oversight and
@@ -147,10 +147,10 @@ const AboutPage = () => (
       <motion.div {...fadeUp} className="max-w-5xl mx-auto">
         <div className="text-center mb-12">
           <span className="text-primary text-sm font-body tracking-widest uppercase">What We Offer</span>
-          <h2 className="text-3xl md:text-4xl font-display mt-3 text-foreground">Our Service Areas</h2>
+          <h2 className="text-3xl md:text-4xl font-display mt-3 text-primary">Our Service Areas</h2>
         </div>
 
-        <div className="border border-foreground/10 rounded-2xl overflow-hidden bg-foreground/[0.04] backdrop-blur-sm">
+        <div className="border border-gray-200 rounded-2xl overflow-hidden bg-white shadow-sm">
           {services.map((s, i) => (
             <motion.div
               key={s.title}
@@ -159,15 +159,15 @@ const AboutPage = () => (
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.06 }}
               className={`flex items-start gap-5 p-6 ${
-                i < services.length - 1 ? "border-b border-foreground/10" : ""
+                i < services.length - 1 ? "border-b border-gray-200" : ""
               } hover:bg-primary/[0.03] transition-colors`}
             >
               <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
                 <s.icon className="text-primary" size={18} />
               </div>
               <div>
-                <h3 className="font-display text-lg text-foreground mb-1">{s.title}</h3>
-                <p className="text-muted-foreground text-sm font-body leading-relaxed">{s.text}</p>
+                <h3 className="font-display text-lg text-primary mb-1">{s.title}</h3>
+                <p className="text-[#1a1a1a] text-sm font-body leading-relaxed">{s.text}</p>
               </div>
             </motion.div>
           ))}
@@ -178,11 +178,11 @@ const AboutPage = () => (
     {/* CCB & SD VISta */}
     <section className="container mx-auto px-4 mb-20">
       <motion.div {...fadeUp} className="max-w-4xl mx-auto space-y-8">
-        <div className="rounded-2xl border border-foreground/10 bg-foreground/[0.04] backdrop-blur-sm p-8 md:p-10">
+        <div className="rounded-2xl border border-gray-200 bg-white p-8 md:p-10 shadow-sm">
           <h2 className="text-2xl md:text-3xl font-display text-primary mb-4">
             Climate, Community & Biodiversity (CCB)
           </h2>
-          <p className="text-muted-foreground font-body leading-relaxed">
+          <p className="text-[#1a1a1a] font-body leading-relaxed">
             We integrate the CCB methodology into AFOLU projects to ensure they not only mitigate climate change but
             also deliver significant benefits to local communities and biodiversity. The CCB methodology emphasizes
             sustainable land use management practices that address climate change, promote social equity, and protect
@@ -190,11 +190,11 @@ const AboutPage = () => (
           </p>
         </div>
 
-        <div className="rounded-2xl border border-foreground/10 bg-foreground/[0.04] backdrop-blur-sm p-8 md:p-10">
+        <div className="rounded-2xl border border-gray-200 bg-white p-8 md:p-10 shadow-sm">
           <h2 className="text-2xl md:text-3xl font-display text-primary mb-4">
             Sustainable Development Verified Impact Standard (SD VISta)
           </h2>
-          <p className="text-muted-foreground font-body leading-relaxed">
+          <p className="text-[#1a1a1a] font-body leading-relaxed">
             We integrate SD VISta into AFOLU projects to ensure they contribute to sustainable development goals (SDGs).
             SD VISta provides a framework for verifying social, environmental, and economic impacts — including poverty
             alleviation, gender equality, and local community benefits — ensuring transparency, accountability, and
@@ -207,18 +207,18 @@ const AboutPage = () => (
     {/* Carbon Project Development */}
     <section className="container mx-auto px-4 pb-10">
       <motion.div {...fadeUp} className="max-w-4xl mx-auto">
-        <div className="rounded-2xl border border-foreground/10 bg-foreground/[0.04] backdrop-blur-sm p-8 md:p-10">
+        <div className="rounded-2xl border border-gray-200 bg-white p-8 md:p-10 shadow-sm">
           <h2 className="text-2xl md:text-3xl font-display text-primary mb-4">
             Carbon Project Development & Implementation
           </h2>
-          <p className="text-muted-foreground font-body leading-relaxed">
+          <p className="text-[#1a1a1a] font-body leading-relaxed">
             We help organizations navigate carbon offset project design, development, and implementation — ensuring
             alignment with international standards. Our services include carbon footprint assessment, project registration,
             monitoring and verification, and guidance on generating and trading carbon credits. We work with renowned
             registries such as Verra, Gold Standard, International Carbon Registry (ICR), and other globally recognized
             standards, ensuring projects meet best practice compliance requirements.
           </p>
-          <p className="text-muted-foreground font-body leading-relaxed mt-4">
+          <p className="text-[#1a1a1a] font-body leading-relaxed mt-4">
             With a holistic approach spanning sustainable agriculture, forestry, waste management, carbon offsetting, and
             technology, Carboneutrivo empowers organizations to reduce their carbon footprint, enhance ecosystem resilience,
             and foster long term economic growth across various sectors.
