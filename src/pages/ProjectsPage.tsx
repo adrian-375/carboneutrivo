@@ -176,7 +176,7 @@ const ProjectsPage = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: i * 0.05 }}
-            className="rounded-2xl border border-foreground/10 bg-foreground/[0.04] backdrop-blur-sm p-8 md:p-12"
+            className="rounded-2xl border border-gray-200 bg-white p-8 md:p-12"
           >
             {/* Header */}
             <div className="flex items-start gap-5 mb-6">
