@@ -19,11 +19,14 @@ const Footer = () => (
             Investor discussions and data room access available upon request.
           </p>
         </div>
-        <div>
+        <div className="space-y-2">
           <div className="flex items-center gap-2 text-muted-foreground text-sm font-body">
             <Phone size={14} className="text-primary" />
             +91 8310624214
           </div>
+          <p className="text-muted-foreground text-xs font-body">
+            WeWork Embassy One, Hebbal, Bangalore
+          </p>
         </div>
       </div>
       <div className="mt-10 pt-6 border-t border-border text-center">

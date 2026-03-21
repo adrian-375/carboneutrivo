@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import riskFrameworkImg from "@/assets/risk-framework.jpg";
 
 const fadeUp = {
@@ -131,6 +130,13 @@ const riskItems = [
   },
 ];
 
+const PolicyCard = ({ title, desc }: { title: string; desc: string }) => (
+  <div className="rounded-2xl border border-gray-300 bg-white/40 shadow-md backdrop-blur-sm px-6 py-5">
+    <h3 className="font-display text-base text-black mb-2">{title}</h3>
+    <p className="text-black text-sm font-body leading-relaxed">{desc}</p>
+  </div>
+);
+
 const GovernancePage = () => (
   <div className="pt-32 pb-20 bg-gray-50 text-black">
     {/* Hero */}
@@ -152,39 +158,21 @@ const GovernancePage = () => (
       {/* Section 1: Governance & Ethical Conduct */}
       <motion.div {...fadeUp}>
         <h2 className="text-3xl font-display text-primary mb-6">Governance & Ethical Conduct</h2>
-        <Accordion type="multiple" className="space-y-3">
+        <div className="space-y-3">
           {governanceItems.map((item) => (
-            <AccordionItem
-              key={item.title}
-              value={item.title}
-              className="rounded-2xl border border-gray-300 bg-white/40 shadow-md backdrop-blur-sm px-6 overflow-hidden"
-            >
-              <AccordionTrigger className="font-display text-base text-black hover:no-underline py-5">
-                {item.title}
-              </AccordionTrigger>
-              <AccordionContent className="text-black text-sm font-body leading-relaxed">{item.desc}</AccordionContent>
-            </AccordionItem>
+            <PolicyCard key={item.title} title={item.title} desc={item.desc} />
           ))}
-        </Accordion>
+        </div>
       </motion.div>
 
       {/* Section 2: Integrity & Safeguards */}
       <motion.div {...fadeUp}>
         <h2 className="text-3xl font-display text-primary mb-6">Integrity & Safeguards</h2>
-        <Accordion type="multiple" className="space-y-3">
+        <div className="space-y-3">
           {integrityItems.map((item) => (
-            <AccordionItem
-              key={item.title}
-              value={item.title}
-              className="rounded-2xl border border-gray-300 bg-white/40 shadow-md backdrop-blur-sm px-6 overflow-hidden"
-            >
-              <AccordionTrigger className="font-display text-base text-black hover:no-underline py-5">
-                {item.title}
-              </AccordionTrigger>
-              <AccordionContent className="text-black text-sm font-body leading-relaxed">{item.desc}</AccordionContent>
-            </AccordionItem>
+            <PolicyCard key={item.title} title={item.title} desc={item.desc} />
           ))}
-        </Accordion>
+        </div>
       </motion.div>
 
       {/* Section 3: Risk Management Framework */}
@@ -198,33 +186,28 @@ const GovernancePage = () => (
           each intervention carries distinct ecological, social, and delivery risks. Our framework is aligned with
           Verra, ICVCM, CCB Standards, and SD VISta.
         </p>
-        <Accordion type="multiple" className="space-y-3">
+        <div className="space-y-3">
           {riskItems.map((item) => (
-            <AccordionItem
+            <div
               key={item.title}
-              value={item.title}
-              className="rounded-2xl border border-gray-300 bg-white/40 shadow-md backdrop-blur-sm px-6 overflow-hidden"
+              className="rounded-2xl border border-gray-300 bg-white/40 shadow-md backdrop-blur-sm px-6 py-5"
             >
-              <AccordionTrigger className="font-display text-base text-black hover:no-underline py-5">
-                {item.title}
-              </AccordionTrigger>
-              <AccordionContent>
-                <p className="text-black text-sm font-body mb-3">
-                  <span className="text-black font-medium">Risk:</span> {item.risk}
-                </p>
-                <p className="text-black text-sm font-medium font-body mb-2">Mitigation:</p>
-                <ul className="space-y-1.5">
-                  {item.mitigations.map((m) => (
-                    <li key={m} className="text-black text-sm font-body flex items-start gap-2">
-                      <span className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 flex-shrink-0" />
-                      {m}
-                    </li>
-                  ))}
-                </ul>
-              </AccordionContent>
-            </AccordionItem>
+              <h3 className="font-display text-base text-black mb-3">{item.title}</h3>
+              <p className="text-black text-sm font-body mb-3">
+                <span className="font-medium">Risk:</span> {item.risk}
+              </p>
+              <p className="text-black text-sm font-medium font-body mb-2">Mitigation:</p>
+              <ul className="space-y-1.5">
+                {item.mitigations.map((m) => (
+                  <li key={m} className="text-black text-sm font-body flex items-start gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 flex-shrink-0" />
+                    {m}
+                  </li>
+                ))}
+              </ul>
+            </div>
           ))}
-        </Accordion>
+        </div>
         <p className="text-gray-500 text-xs font-body mt-6">
           Risk management is embedded within Carboneutrivo's Governance & Integrity framework, with defined oversight
           mechanisms, periodic risk reviews, and escalation protocols.
