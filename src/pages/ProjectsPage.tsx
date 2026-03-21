@@ -146,7 +146,7 @@ const projects: Project[] = [
 ];
 
 const ProjectsPage = () => (
-  <div className="pt-32 pb-20 overflow-x-hidden">
+  <div className="pt-32 pb-20 overflow-x-hidden bg-white">
     {/* Hero */}
     <section className="container mx-auto px-4 mb-16">
       <motion.div
