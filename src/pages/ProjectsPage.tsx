@@ -16,6 +16,25 @@ interface Project {
 
 const projects: Project[] = [
   {
+    id: "afolu-png",
+    icon: TreePine,
+    title: "AFOLU Projects, Madang Province, PNG",
+    subtitle: "Madang Province, Papua New Guinea",
+    type: "AFOLU",
+    standard: "VCS+CCB Gold",
+    area: "200,000+ ha",
+    partner: "Mousa Forest Jaru Landowners Association",
+    objectives: [
+      "Collaboration with the Madang Provincial Government and local landowners for comprehensive climate-positive interventions",
+      "Afforestation, Reforestation, and Revegetation (ARR) projects across degraded landscapes",
+      "Mangrove Restoration and Blue Carbon Development for coastal ecosystem recovery",
+      "Improved Forest Management (IFM) to enhance carbon stocks and forest integrity",
+      "REDD+ aligned Forest Conservation Initiatives to reduce emissions from deforestation",
+      "Sustainable Development Goals (SDGs) certifications for verified social and environmental impact",
+      "Climate, Community & Biodiversity (CCB Gold) Certifications ensuring co-benefits across all project activities",
+    ],
+  },
+  {
     id: "mangrove-nigeria",
     icon: Waves,
     title: "Nigeria Niger Delta Mangrove Restoration & Blue Carbon Project",
@@ -31,25 +50,6 @@ const projects: Project[] = [
       "Identifies and protects High Conservation Value (HCV) areas for biodiversity and ecosystem services",
       "Strengthens women and youth Self-Help Groups (SHGs) for income generation and equitable benefit-sharing",
       "Ensures Free, Prior, and Informed Consent (FPIC) and transparent community governance",
-    ],
-  },
-  {
-    id: "faith-afforestation-india",
-    icon: Leaf,
-    title: "Faith-Based Climate Stewardship Initiative: Net Zero through Community-Led Afforestation",
-    subtitle: "South India",
-    type: "AFOLU",
-    standard: "VCS+CCB Gold",
-    area: "6,000 ha",
-    partner: "Carboneutrivo / FRLHT / ConnectGlocal",
-    objectives: [
-      "Faith-driven afforestation led by the Church of South India across 6,000 ha of degraded and church-owned lands",
-      "Plants native and medicinal tree species including IUCN Red List threatened species",
-      "Creates livelihoods through nursery development, plantation work, and long-term monitoring",
-      "Promotes medicinal plants for improved health outcomes and alternative income",
-      "Identifies and protects HCV areas through community participation",
-      "Reduces rural migration and improves ecological resilience through a clear theory of change",
-      "Integrates environmental education aligned with faith-based principles of creation care",
     ],
   },
   {
@@ -72,43 +72,81 @@ const projects: Project[] = [
     ],
   },
   {
-    id: "agroforestry-karnataka",
+    id: "afforestation-karnataka",
     icon: TreePine,
-    title: "Agroforestry Project",
-    subtitle: "Karnataka, India",
-    type: "ARR",
-    standard: "VCS",
-    area: "8,500 ha",
-    partner: "",
+    title: "Developing Long-Term Carbon Assets through Afforestation in Karnataka",
+    subtitle: "Multiple Districts of Karnataka, India",
+    type: "AFOLU",
+    standard: "VCS+CCB Gold",
+    area: "6,000 ha",
+    partner: "Vedic Green Solutions",
     objectives: [
-      "Promote silvopasture and agro-silviculture systems",
-      "Increase carbon sequestration through tree planting",
-      "Restore soil structure and reduce erosion",
-      "Create diversified income streams for farmers",
-      "Enhance long-term agricultural resilience",
+      "Builds high-integrity, long-term carbon assets through afforestation on smallholder lands in Karnataka",
+      "Integrates fruit-bearing tree systems for combined ecological and economic benefit",
+      "40-year project horizon ensuring permanence and long-term carbon sequestration",
+      "55% carbon revenue share for participating farmers promoting equitable benefit distribution",
+      "Registration planned under Verra VM0047 and CCB for strong climate, community, and biodiversity outcomes",
     ],
   },
   {
-    id: "bamboo-shillong",
-    icon: TreePine,
-    title: "Native Bamboo Plantation",
-    subtitle: "Shillong, India",
-    type: "ARR",
-    standard: "VCS",
-    area: "3,200 ha",
-    partner: "",
+    id: "amritvan-india",
+    icon: Leaf,
+    title: "Project AMRITVAN: Restoring India's Medicinal Biodiversity for Climate, Health, and Livelihoods",
+    subtitle: "Multiple Districts of Karnataka and North Eastern States of India",
+    type: "AFOLU",
+    standard: "VCS+CCB Gold",
+    area: "5,000 ha",
+    partner: "ConnectGlocal Social Service Pvt Ltd & FRLHT",
     objectives: [
-      "Integrate bamboo into agroforestry systems",
-      "Enhance carbon sequestration capacity",
-      "Prevent soil erosion and improve water retention",
-      "Promote biodiversity restoration",
-      "Create bamboo-based livelihood opportunities",
+      "Pro-poor, community-led nature-based initiative focused on cultivating Rare, Endangered, and Threatened (RET) medicinal trees and shrubs",
+      "Links community-based restoration with structured access to medicinal and herbal markets",
+      "Integrates afforestation, biodiversity conservation, education, and primary health linkages",
+      "Identifies and protects High Conservation Value (HCV) areas for biodiversity conservation",
+      "Creates long-term green jobs and sustainable rural livelihoods",
+      "60% revenue share for communities and local partners ensuring equitable benefit distribution",
+    ],
+  },
+  {
+    id: "bamboo-kerala",
+    icon: TreePine,
+    title: "Kerala Bamboo Restoration Initiative: A Nature-Based Climate & Livelihood Investment Project",
+    subtitle: "Kerala, India",
+    type: "AFOLU",
+    standard: "VCS+CCB Gold",
+    area: "5,000 ha",
+    partner: "Kerala Forest Research Institute",
+    objectives: [
+      "Community-centered landscape restoration through native bamboo-based restoration of degraded lands",
+      "Enhances carbon sequestration while protecting High Conservation Value (HCV) areas and ecosystem integrity",
+      "Restores native species, habitat connectivity, and ecological functions for biodiversity conservation",
+      "Creates structured green jobs including nursery development, plantation activities, and sustainable bamboo management",
+      "Theory of Change links ecosystem restoration with inclusive economic opportunities for community participation",
+      "Establishes a scalable model for high-integrity nature-based investments in India",
+    ],
+  },
+  {
+    id: "faith-afforestation-india",
+    icon: Leaf,
+    title: "Faith-Based Climate Stewardship Initiative: Net Zero through Community-Led Afforestation",
+    subtitle: "South India",
+    type: "AFOLU",
+    standard: "VCS+CCB Gold",
+    area: "6,000 ha",
+    partner: "Carboneutrivo / FRLHT / ConnectGlocal",
+    objectives: [
+      "Faith-driven afforestation led by the Church of South India across 6,000 ha of degraded and church-owned lands",
+      "Plants native and medicinal tree species including IUCN Red List threatened species",
+      "Creates livelihoods through nursery development, plantation work, and long-term monitoring",
+      "Promotes medicinal plants for improved health outcomes and alternative income",
+      "Identifies and protects HCV areas through community participation",
+      "Reduces rural migration and improves ecological resilience through a clear theory of change",
+      "Integrates environmental education aligned with faith-based principles of creation care",
     ],
   },
 ];
 
 const ProjectsPage = () => (
-  <div className="pt-32 pb-20 bg-white overflow-x-hidden">
+  <div className="pt-32 pb-20 overflow-x-hidden">
     {/* Hero */}
     <section className="container mx-auto px-4 mb-16">
       <motion.div
@@ -118,12 +156,12 @@ const ProjectsPage = () => (
         className="max-w-4xl mx-auto text-center"
       >
         <span className="text-primary text-sm tracking-widest uppercase font-body">Ongoing Projects</span>
-        <h1 className="text-4xl md:text-6xl font-display mt-4 mb-6 text-primary">
+        <h1 className="text-4xl md:text-6xl font-display mt-4 mb-6 text-foreground">
           Climate & Sustainability Initiatives
         </h1>
-        <p className="text-base md:text-lg text-[#1a1a1a] font-body max-w-3xl mx-auto leading-relaxed">
-          Our ongoing projects integrate science, community participation, and internationally recognized
-          methodologies to deliver measurable climate, biodiversity, and socio-economic impact.
+        <p className="text-base md:text-lg text-muted-foreground font-body max-w-3xl mx-auto leading-relaxed">
+          Our ongoing projects integrate science, community participation, and internationally recognized methodologies
+          to deliver measurable climate, biodiversity, and socio-economic impact.
         </p>
       </motion.div>
     </section>
@@ -138,7 +176,7 @@ const ProjectsPage = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: i * 0.05 }}
-            className="rounded-2xl border border-gray-200 bg-white p-8 md:p-12 shadow-sm"
+            className="rounded-2xl border border-foreground/10 bg-foreground/[0.04] backdrop-blur-sm p-8 md:p-12"
           >
             {/* Header */}
             <div className="flex items-start gap-5 mb-6">
@@ -147,7 +185,7 @@ const ProjectsPage = () => (
               </div>
               <div>
                 <h2 className="text-xl md:text-3xl font-display text-primary leading-snug">{p.title}</h2>
-                <span className="text-sm text-gray-500 font-body flex items-center gap-1 mt-1">
+                <span className="text-sm text-muted-foreground font-body flex items-center gap-1 mt-1">
                   <MapPin size={14} /> {p.subtitle}
                 </span>
               </div>
@@ -156,10 +194,14 @@ const ProjectsPage = () => (
             {/* Meta badges */}
             <div className="flex flex-wrap gap-2 mb-8">
               <span className="text-xs px-3 py-1 rounded-full bg-primary/15 text-primary font-body">{p.type}</span>
-              <span className="text-xs px-3 py-1 rounded-full bg-gray-100 text-[#1a1a1a] font-body">{p.standard}</span>
-              <span className="text-xs px-3 py-1 rounded-full bg-gray-100 text-gray-500 font-body">{p.area}</span>
+              <span className="text-xs px-3 py-1 rounded-full bg-foreground/10 text-foreground font-body">
+                {p.standard}
+              </span>
+              <span className="text-xs px-3 py-1 rounded-full bg-foreground/10 text-muted-foreground font-body">
+                {p.area}
+              </span>
               {p.partner && (
-                <span className="text-xs px-3 py-1 rounded-full bg-gray-100 text-gray-500 font-body flex items-center gap-1">
+                <span className="text-xs px-3 py-1 rounded-full bg-foreground/10 text-muted-foreground font-body flex items-center gap-1">
                   <Users size={12} /> {p.partner}
                 </span>
               )}
@@ -169,7 +211,7 @@ const ProjectsPage = () => (
             <h3 className="text-sm uppercase tracking-widest text-primary font-body mb-4">Key Objectives</h3>
             <ul className="space-y-3">
               {p.objectives.map((obj) => (
-                <li key={obj} className="text-base md:text-lg text-[#1a1a1a] font-body flex items-start gap-3">
+                <li key={obj} className="text-base md:text-lg text-muted-foreground font-body flex items-start gap-3">
                   <span className="w-2 h-2 rounded-full bg-primary mt-2.5 flex-shrink-0" />
                   {obj}
                 </li>
