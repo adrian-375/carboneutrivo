@@ -54,9 +54,7 @@ const pillars = [
 ];
 
 const ApproachPage = () => (
-  <div className="pt-32 pb-20 bg-gray-50">
-    {" "}
-    {/* Light gray background */}
+  <div className="pt-32 pb-20 bg-white">
     {/* Hero */}
     <section className="container mx-auto px-4 mb-20">
       <motion.div {...fadeUp} className="max-w-4xl mx-auto text-center">
@@ -64,13 +62,14 @@ const ApproachPage = () => (
         <h1 className="text-4xl md:text-6xl font-display mt-4 mb-8 text-primary">
           Building High-Integrity Climate Solutions for the Long Term
         </h1>
-        <p className="text-lg md:text-xl text-gray-700 font-body leading-relaxed max-w-3xl mx-auto">
+        <p className="text-lg md:text-xl text-[#1a1a1a] font-body leading-relaxed max-w-3xl mx-auto">
           At Carboneutrivo, we believe carbon markets must deliver real climate impact, lasting community value, and
           credible returns for investors. Our work is guided by seven core pillars that define how we design, implement,
           and scale high-integrity carbon projects globally.
         </p>
       </motion.div>
     </section>
+
     {/* Pillars */}
     <section className="container mx-auto px-4 mb-20">
       <div className="section-divider mb-16" />
@@ -86,7 +85,7 @@ const ApproachPage = () => (
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.06 }}
-              className="rounded-2xl border border-gray-200 bg-white/90 backdrop-blur-sm p-6 md:p-8 hover:border-primary/30 transition-colors"
+              className="rounded-2xl border border-gray-200 bg-white p-6 md:p-8 shadow-sm hover:border-primary/30 transition-colors"
             >
               <div className="flex items-start gap-5">
                 <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
@@ -97,7 +96,7 @@ const ApproachPage = () => (
                     <span className="text-primary/50 text-xs font-body font-semibold tracking-widest">{p.num}</span>
                     <h3 className="font-display text-xl text-primary">{p.title}</h3>
                   </div>
-                  <p className="text-gray-800 text-sm font-body leading-relaxed">{p.desc}</p>
+                  <p className="text-[#1a1a1a] text-sm font-body leading-relaxed">{p.desc}</p>
                 </div>
               </div>
             </motion.div>
@@ -105,12 +104,13 @@ const ApproachPage = () => (
         </div>
       </motion.div>
     </section>
+
     {/* Commitment */}
     <section className="container mx-auto px-4 pb-10">
       <motion.div {...fadeUp} className="max-w-3xl mx-auto">
-        <div className="rounded-2xl border border-gray-200 bg-white/90 backdrop-blur-sm p-8 md:p-10 text-center">
+        <div className="rounded-2xl border border-gray-200 bg-white p-8 md:p-10 text-center shadow-sm">
           <h2 className="text-2xl md:text-3xl font-display text-primary mb-4">Our Commitment</h2>
-          <p className="text-gray-800 font-body leading-relaxed">
+          <p className="text-[#1a1a1a] font-body leading-relaxed">
             Carboneutrivo does not merely generate carbon credits. We build credible, science-backed climate assets that
             deliver lasting environmental, social, and economic value.
           </p>

@@ -70,21 +70,20 @@ const ExpertisePage = () => {
   }, [hash]);
 
   return (
-    <div className="pt-32 pb-20 bg-gray-50">
-      {" "}
-      {/* Light gray background */}
+    <div className="pt-32 pb-20 bg-white">
       {/* Hero */}
       <section className="container mx-auto px-4 mb-20">
         <motion.div {...fadeUp} className="max-w-4xl mx-auto text-center">
           <span className="text-primary text-sm font-body tracking-widest uppercase">Our Expertise</span>
           <h1 className="text-4xl md:text-6xl font-display mt-4 mb-8 text-primary">What We Do</h1>
-          <p className="text-lg md:text-xl text-gray-700 font-body leading-relaxed max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-[#1a1a1a] font-body leading-relaxed max-w-3xl mx-auto">
             Carbon Fund Generation & Management: We assist organisations in developing, managing, and monetising carbon
             offset projects, ensuring they meet international carbon standards and generate valuable credits for climate
             impact.
           </p>
         </motion.div>
       </section>
+
       {/* Sections */}
       <section className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto space-y-8">
@@ -96,7 +95,7 @@ const ExpertisePage = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.05 }}
-              className="scroll-mt-32 rounded-2xl border border-gray-200 bg-white/90 backdrop-blur-sm p-8 md:p-10 shadow-sm"
+              className="scroll-mt-32 rounded-2xl border border-gray-200 bg-white p-8 md:p-10 shadow-sm"
             >
               <div className="flex items-start gap-5">
                 <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
@@ -104,11 +103,11 @@ const ExpertisePage = () => {
                 </div>
                 <div className="flex-1">
                   <h2 className="font-display text-2xl text-primary mb-3">{s.title}</h2>
-                  <p className="text-gray-800 text-sm font-body leading-relaxed">{s.desc}</p>
+                  <p className="text-[#1a1a1a] text-sm font-body leading-relaxed">{s.desc}</p>
                   {s.items && (
                     <ul className="mt-5 space-y-2">
                       {s.items.map((item) => (
-                        <li key={item} className="text-gray-700 text-xs font-body flex items-start gap-2">
+                        <li key={item} className="text-[#1a1a1a] text-xs font-body flex items-start gap-2">
                           <span className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 flex-shrink-0" />
                           {item}
                         </li>
